@@ -1,0 +1,14 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: ${CLIENT_ID}
+            clientSecret: ${CLIENT_SECRET}
+server:
+  port: 9090
+logging:
+  level:
+    org.springframework.security.web: DEBUG
+
