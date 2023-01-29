@@ -18,6 +18,7 @@ public class SecurityConfiguration {
             e -> e.authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED)));
         http.oauth2Login().and().logout(l -> l
             .logoutSuccessUrl("/").permitAll());
+        http.csrf().disable();
 
         return http.build();
     }
